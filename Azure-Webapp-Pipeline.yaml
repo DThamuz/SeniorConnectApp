@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main  # or master, depending on your branch
+      - main
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -19,6 +19,6 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<your-azure-subscription>'
-    appName: '<your-web-app-name>'
+    azureSubscription: 'Azure_School_Semester_2'
+    appName: 'Wapp-SeniorConnect-001'
     package: $(Build.ArtifactStagingDirectory)
