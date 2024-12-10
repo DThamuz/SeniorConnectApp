@@ -19,6 +19,6 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Azure_School_Semester_2'
+    azureSubscription: 'ServiceConn-SeniorConnect'
     appName: 'Wapp-SeniorConnect-001'
     package: $(Build.ArtifactStagingDirectory)
