@@ -18,4 +18,4 @@ steps:
     azureSubscription: 'ServiceConn-SeniorConnect'
     appType: 'webApp'
     WebAppName: 'SC-Wapp-001'
-    packageForLinux: 'index.html'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
