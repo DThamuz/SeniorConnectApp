@@ -10,5 +10,12 @@ pool:
   name: default
 
 steps:
-- script: echo Deze web-app is gemaakt door een Azure Pipeline & Damian Luijkx!
+- script: echo Deze web-app is gemaakt door een Azure Pipeline
   displayName: 'Run a one-line script'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'ServiceConn-SeniorConnect'
+    appType: 'webApp'
+    WebAppName: 'SC-Wapp-001'
+    packageForLinux: 'index.html'
